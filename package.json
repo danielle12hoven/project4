@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/danielle12hoven/project4#readme",
   "dependencies": {
-    "expres": "0.0.5"
+    "expres": "0.0.5",
+    "express": "^4.14.0"
   }
 }
