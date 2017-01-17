@@ -93,18 +93,18 @@ app.post('/signin', function(req, res){
   });
 });
 
-// //EMAIL DATA - WORKS!
-// app.post('/contact', function(req, res){
-//   console.log(req.body.name);
-//     db.one("INSERT INTO emails(name, email, message) values($1, $2, $3) returning message", [req.body.name, req.body.email, req.body.message])
-//    .then(function(data){
-//      console.log(data.id);
-//      res.render("contactSent",{message: data.message});
-//    })
-//    .catch(function(error){
-//      console.log("Error, User could not be made", error.message || error);
-//    });
-// });
+//EMAIL DATA - WORKS!
+app.post('/contact', function(req, res){
+  console.log(req.body.name);
+    db.one("INSERT INTO emails(name, email, message) values($1, $2, $3) returning message", [req.body.name, req.body.email, req.body.message])
+   .then(function(data){
+     console.log(data.id);
+     res.render("contactSent",{message: data.message});
+   })
+   .catch(function(error){
+     console.log("Error, User could not be made", error.message || error);
+   });
+});
 
 
 // //SAVED DATA - WORKS!
@@ -142,13 +142,31 @@ app.post('/signin', function(req, res){
 //   res.render('saved')
 // })
 
-app.get('/index', function(req, res){
-  res.render('index')
-})
 app.get('/sign-up/signin', function(req, res){
   res.render('sign-up/signin')
 })
 app.get('/sign-up/signup', function(req, res){
   res.render('sign-up/signup')
+})
+app.get('/contact', function(req, res){
+  res.render('contact')
+})
+app.get('/contactSent', function(req, res){
+  res.render('contactSent')
+})
+app.get('/crime', function(req, res){
+  res.render('crime')
+})
+app.get('/events', function(req, res){
+  res.render('events')
+})
+app.get('/index', function(req, res){
+  res.render('index')
+})
+app.get('/neighborhood', function(req, res){
+  res.render('neighborhood')
+})
+app.get('/questions', function(req, res){
+  res.render('questions')
 })
 
