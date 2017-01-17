@@ -29,11 +29,12 @@ app.use(session({
 }))
 
 
-var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000');
+var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000/project4');
 
 app.listen(PORT, function() {
   console.log('Node app is running on', PORT);
 });
+
 
 //WORKS!
 app.get("/", function(req, res){
@@ -92,4 +93,62 @@ app.post('/signin', function(req, res){
   });
 });
 
+// //EMAIL DATA - WORKS!
+// app.post('/contact', function(req, res){
+//   console.log(req.body.name);
+//     db.one("INSERT INTO emails(name, email, message) values($1, $2, $3) returning message", [req.body.name, req.body.email, req.body.message])
+//    .then(function(data){
+//      console.log(data.id);
+//      res.render("contactSent",{message: data.message});
+//    })
+//    .catch(function(error){
+//      console.log("Error, User could not be made", error.message || error);
+//    });
+// });
+
+
+// //SAVED DATA - WORKS!
+// app.post('/save', function(req, res){
+//     var user_id = req.session.user.id;
+//     var name = req.body.name;
+//     console.log(req.body.name);
+
+//     db.none("INSERT INTO saved(name, user_id) values($1, $2)", [name, user_id])
+//    .then(function(data){
+//      console.log('saved');
+//    })
+// });
+
+
+// //DISPLAY DATA - WORKS!
+// app.get('/saved', function(req, res){
+//   console.log('/saved')
+//   db.any("SELECT * FROM saved WHERE user_id = $1", [req.session.user.id])
+//   .then(function(data){
+//     console.log(data)
+//     var data = {data:data}
+//     res.render('saved', data);
+//   });
+// });
+
+// // DELETE ITEM FROM SAVED TABLE
+// app.delete('/delete/:id', function(req,res) {
+//   // console.log(req.params)
+//   // db.none("DELETE FROM saved WHERE id = $1", [req.params.id])
+//   id = req.params.id
+//   db.none("DELETE FROM saved WHERE id = $1", [id])
+//   console.log('yay')
+
+//   res.render('saved')
+// })
+
+app.get('/index', function(req, res){
+  res.render('index')
+})
+app.get('/sign-up/signin', function(req, res){
+  res.render('sign-up/signin')
+})
+app.get('/sign-up/signup', function(req, res){
+  res.render('sign-up/signup')
+})
 
