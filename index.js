@@ -142,6 +142,7 @@ app.post('/contact', function(req, res){
 //   res.render('saved')
 // })
 
+
 app.get('/sign-up/signin', function(req, res){
   res.render('sign-up/signin')
 })
@@ -169,4 +170,7 @@ app.get('/neighborhood', function(req, res){
 app.get('/questions', function(req, res){
   res.render('questions')
 })
+
+
+
 

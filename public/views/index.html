@@ -9,8 +9,24 @@
 
   <body>
   <header id="header" class="coverPhoto">
-    <img class="coverPhoto" src="/images/amsterdam.jpeg" alt="">
   </header>
+
+  <div class="video-container">
+    <video playsinline autoplay muted loop poster="./media/NYC-Traffic.jpg" id="bgvid">
+        <source src="./media/NYC-Traffic.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        <source src="./media/NYC-Traffic.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+    </video>
+<!--     <img src=".media/NYC-Traffic.jpg" alt="no image">
+ -->  </div>
+
+<div id="vidtop-content">
+  <div class="vid-info">
+    <h1>Op Reis Naar New York</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+    <p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+  </div>
+</div>
+
 
     <div class="home-page">
       <div class="topNav">
@@ -19,7 +35,16 @@
             <a href="/contact">Contact</a>
           </li>
           <li class="listItems">
-            <a href="/saved">Saved</a>
+            <a href="/crime">Crime</a>
+          </li>
+          <li class="listItems">
+            <a href="/events">Events</a>
+          </li>
+          <li class="listItems">
+            <a href="/neighborhoods">Neighborhoods</a>
+          </li>
+          <li class="listItems">
+            <a href="/questions">Questions</a>
           </li>
           <li class="listItems">
             <a href="/sign-up/signin">Sign Out</a>
@@ -28,8 +53,6 @@
       </div>
 
       <br></br>
-    <h1>Hello</h1>
-
 
 
     <script src="/js/jquery.js" type="text/javascript"></script>
