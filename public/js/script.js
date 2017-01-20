@@ -1,34 +1,34 @@
 $(document).ready(function() {
 console.log("script loaded")
 
-// GOOGLE API//
-var mykey = config.MY_KEY;
-var apiKey = process.env.apiKey;
+//API//
+// var MY_KEY = config.MY_KEY;
+// var MY_KEY = process.env.MY_KEY;
 
 
-// AMENITIES API//
-var getAmenities = function (amenities) {
-  $.ajax({
-    type:"GET",
-    url: 'http://datamine.mta.info/mta_esi.php?key=MY_KEY',
-    dataType: "JSON",
-    success: function(data) {
-      console.log(data.name);
-      parseAmenities(data);
-    },
-    error: function(data){
-      console.log(data)
-    }
-  })
-}
+// MTA API//
+// var getMTA = function (MTA) {
+//   $.ajax({
+//     type:"GET",
+//     url: '/api/v1/trains/L',
+//     dataType: "JSON",
+//     success: function(data) {
+//       console.log(data.train);
+//       parseMTA(data);
+//     },
+//     error: function(data){
+//       console.log(data)
+//     }
+//   })
+// }
 
-var parseAmenities = function(data) {
-  var $amenitiesUl = $("ul");
-  var $amenitiesLi = $("li");
-  var $amenitiesMap = data.name
+var parseMTA = function(data) {
+  var $MTAUl = $("ul");
+  var $MTALi = $("li");
+  var $MTAMap = data.train
 
-  $amenitiesUl.append($amenitiesLi);
-  $("postAmenitiesData").append($amenitiesUl)
+  $MTAUl.append($MTALi);
+  $("postMTAData").append($MTAUl)
 }
 
 

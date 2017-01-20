@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 3000;
 
 const express = require('express');
 const app = express();
@@ -34,6 +34,48 @@ var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localho
 app.listen(PORT, function() {
   console.log('Node app is running on', PORT);
 });
+
+
+
+
+
+//MTA API//
+var Mta = require('mta-gtfs');
+var mta = new Mta({
+  // key: 'c1e7da8de8a1fda8490eb53eeadaa06e', // only needed for mta.schedule() method
+});
+
+// mta.stop().then(function (result) {
+//   console.log(result);
+//   console.log('.stop worked')
+// }).catch(function (err) {
+//   console.log(err);
+// });
+
+
+
+app.get('/subway', function(req, res){
+    mta.status('subway').then(function (result) {
+      console.log(result);
+      console.log('status worked')
+      console.log('/subway post working')
+      var stuff = {data:result}
+      res.render('subway', stuff)
+    });
+  });
+
+app.get('/metro', function(req, res){
+    mta.status('subway').then(function (result) {
+      console.log(result);
+      console.log('status worked')
+      console.log('/metro post working')
+      var stuff = {data:result}
+      res.render('metro', stuff)
+    });
+  });
+
+
+
 
 
 //WORKS!
@@ -144,6 +186,7 @@ app.post('/contact', function(req, res){
 // })
 
 
+
 // ENGLISH RENDERING//
 app.get('/sign-up/signin', function(req, res){
   res.render('sign-up/signin')
@@ -208,5 +251,6 @@ app.get('/buurten', function(req, res){
 app.get('/metro', function(req, res){
   res.render('metro')
 })
+
 
 
