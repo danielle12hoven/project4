@@ -54,7 +54,8 @@ app.get("/", function(req, res){
     "id": id
   }
 
-  res.render('sign-up/signin');
+  res.render('index');
+  // res.render('sign-up/signin');
 });
 
 
@@ -143,11 +144,15 @@ app.post('/contact', function(req, res){
 // })
 
 
+// ENGLISH RENDERING//
 app.get('/sign-up/signin', function(req, res){
   res.render('sign-up/signin')
 })
 app.get('/sign-up/signup', function(req, res){
   res.render('sign-up/signup')
+})
+app.get('/apartments', function(req, res){
+  res.render('apartments')
 })
 app.get('/contact', function(req, res){
   res.render('contact')
@@ -164,13 +169,44 @@ app.get('/events', function(req, res){
 app.get('/index', function(req, res){
   res.render('index')
 })
-app.get('/neighborhood', function(req, res){
-  res.render('neighborhood')
+app.get('/neighborhoods', function(req, res){
+  res.render('neighborhoods')
 })
-app.get('/questions', function(req, res){
-  res.render('questions')
+app.get('/subway', function(req, res){
+  res.render('subway')
 })
 
 
+// DUTCH RENDERING//
+app.get('/sign-up/aanmelden', function(req, res){
+  res.render('sign-up/aanmelden')
+})
+app.get('/sign-up/inschrijven', function(req, res){
+  res.render('sign-up/inschrijven')
+})
+app.get('/appartementen', function(req, res){
+  res.render('appartementen')
+})
+app.get('/contact2', function(req, res){
+  res.render('contact2')
+})
+app.get('/contactVerstuurd', function(req, res){
+  res.render('contactVerstuurd')
+})
+app.get('/criminaliteit', function(req, res){
+  res.render('criminaliteit')
+})
+app.get('/evenementen', function(req, res){
+  res.render('evenementen')
+})
+app.get('/index2', function(req, res){
+  res.render('index2')
+})
+app.get('/buurten', function(req, res){
+  res.render('buurten')
+})
+app.get('/metro', function(req, res){
+  res.render('metro')
+})
 
 
