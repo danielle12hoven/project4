@@ -10,6 +10,19 @@ body {
    height:100%;
 }
 
+/* DIV ALIGNMENT */
+#container1 {
+  padding-top: 40px;
+  width: 100%;
+  height: 150%;
+}
+#container2 {
+  border: solid white;
+  width: 100%;
+  height: 800px;
+  margin-bottom: 100px;
+}
+
 #subway {
   height: 1000px;
 }
@@ -37,17 +50,7 @@ body {
     transform: translateX(-30%) translateY(-30%);
  */}
 
-#container1 {
-  padding-top: 40px;
-  width: 100%;
-  height: 150%;
-}
-#container2 {
-  border: solid white;
-  width: 100%;
-  height: 800px;
-  margin-bottom: 100px;
-}
+
 
 #footer {
    position:fixed;
@@ -137,6 +140,7 @@ body {
 }
 
 
+/* BACKGROUND IMAGES */
 video#page1 {
     top: 30%;
     left: 30%;
