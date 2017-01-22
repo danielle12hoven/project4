@@ -53,24 +53,23 @@ var mta = new Mta({
 // });
 
 
-
-app.get('/subway', function(req, res){
+app.get('/index', function(req, res){
     mta.status('subway').then(function (result) {
       console.log(result);
       console.log('status worked')
-      console.log('/subway post working')
+      console.log('/index post working')
       var stuff = {data:result}
-      res.render('subway', stuff)
+      res.render('index', stuff)
     });
   });
 
-app.get('/metro', function(req, res){
+app.get('/index2', function(req, res){
     mta.status('subway').then(function (result) {
       console.log(result);
       console.log('status worked')
-      console.log('/metro post working')
+      console.log('/index2 post working')
       var stuff = {data:result}
-      res.render('metro', stuff)
+      res.render('index2', stuff)
     });
   });
 
@@ -148,43 +147,6 @@ app.post('/contact', function(req, res){
      console.log("Error, User could not be made", error.message || error);
    });
 });
-
-
-// //SAVED DATA - WORKS!
-// app.post('/save', function(req, res){
-//     var user_id = req.session.user.id;
-//     var name = req.body.name;
-//     console.log(req.body.name);
-
-//     db.none("INSERT INTO saved(name, user_id) values($1, $2)", [name, user_id])
-//    .then(function(data){
-//      console.log('saved');
-//    })
-// });
-
-
-// //DISPLAY DATA - WORKS!
-// app.get('/saved', function(req, res){
-//   console.log('/saved')
-//   db.any("SELECT * FROM saved WHERE user_id = $1", [req.session.user.id])
-//   .then(function(data){
-//     console.log(data)
-//     var data = {data:data}
-//     res.render('saved', data);
-//   });
-// });
-
-// // DELETE ITEM FROM SAVED TABLE
-// app.delete('/delete/:id', function(req,res) {
-//   // console.log(req.params)
-//   // db.none("DELETE FROM saved WHERE id = $1", [req.params.id])
-//   id = req.params.id
-//   db.none("DELETE FROM saved WHERE id = $1", [id])
-//   console.log('yay')
-
-//   res.render('saved')
-// })
-
 
 
 // ENGLISH RENDERING//

@@ -22,14 +22,14 @@ console.log("script loaded")
 //   })
 // }
 
-var parseMTA = function(data) {
-  var $MTAUl = $("ul");
-  var $MTALi = $("li");
-  var $MTAMap = data.train
+// var parseMTA = function(data) {
+//   var $MTAUl = $("ul");
+//   var $MTALi = $("li");
+//   var $MTAMap = data.train
 
-  $MTAUl.append($MTALi);
-  $("postMTAData").append($MTAUl)
-}
+//   $MTAUl.append($MTALi);
+//   $("postMTAData").append($MTAUl)
+// }
 
 
 

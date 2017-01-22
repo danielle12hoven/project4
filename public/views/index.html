@@ -16,41 +16,6 @@
         </video>
       </div>
 
-      <div id="footer">
-        <div class="bottomNav">
-          <ul class="navbarBottom">
-            <li class="listItems">
-              <a href="/index">Home</a>
-            </li>
-            <li class="listItems">
-              <a href="/neighborhoods">Neighborhoods</a>
-            </li>
-            <li class="listItems">
-              <a href="/apartments">Find Apartments</a>
-            </li>
-            <li class="listItems">
-              <a href="/subway">Subway</a>
-            </li>
-            <li class="listItems">
-              <a href="/crime">Crime</a>
-            </li>
-            <li class="listItems">
-              <a href="/events">Events</a>
-            </li>
-            <li class="listItems">
-              <a href="/contact">Contact</a>
-            </li>
-            <li class="listItems">
-              <a href="/sign-up/signin">Sign Out</a>
-            </li>
-
-            <br />
-            <li class="listItems">
-              <a href="index2">nl/en</a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
 
     <div class="popup" id="popup1" data-popup="popup-1">
@@ -63,15 +28,58 @@
           <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
       </div>
     </div>
-
   </div>
 
-<!--
+
   <div id="container2">
-    <div class="video-container2">
-      <img id="page2" src="./images/bridge.jpeg" alt="">
+
+      <div id="subway">
+        <div id="subwayMap">
+          <img src="./images/subway.jpg" alt="">
+        </div>
+
+        <div id="subwayLive">
+          <h2>Live Train Information</h2>
+            {{#data}}
+            {{name}}:
+            {{status}}
+            <br /><br />
+            {{/data}}
+
+            <br />
+          </div>
+      </div>
+  </div>
+
+    <div id="container3">
+      <div id="footer">
+        <div class="bottomNav">
+          <ul class="navbarBottom">
+            <li class="listItems">
+              <a href="/index">Home</a>
+            </li>
+            <li class="listItems">
+              <a href="/neighborhoods">Neighborhoods</a>
+            </li>
+            <li class="listItems">
+              <a href="/crime">Visas</a>
+            </li>
+            <li class="listItems">
+              <a href="/events">Events</a>
+            </li>
+            <li class="listItems">
+              <a href="/contact">Contact</a>
+            </li>
+            <li class="listItems">
+              <a href="/sign-up/signin">Sign Out</a>
+            </li>
+            <li class="listItems">
+              <a href="index2">Translate</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div> -->
 
 
 
