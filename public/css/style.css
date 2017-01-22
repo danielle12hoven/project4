@@ -21,7 +21,21 @@ body {
   width: 100%;
   height: 800px;
   margin-bottom: 100px;
+/*
+    top: 30%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    z-index: -150;
+    -ms-transform: translateX(-30%) translateY(-30%);
+    -moz-transform: translateX(-30%) translateY(-30%);
+    -webkit-transform: translateX(-30%) translateY(-30%);
+    transform: translateX(-30%) translateY(-30%);
+    background: url(./images/visa.jpeg) no-repeat;
+    background-size: cover;
+    position: relative; */
 }
+
 
 #subway {
   height: 1000px;

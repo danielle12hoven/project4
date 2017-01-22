@@ -13,3 +13,6 @@ https://developers.google.com/maps/documentation/embed/start
 
 https://github.com/aamaliaa/mta-gtfs
 - MTA train API
+
+http://www.mns.com/manhattan_rental_market_report
+- NYC rental stats
