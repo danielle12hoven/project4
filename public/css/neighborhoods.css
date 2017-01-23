@@ -1,3 +1,62 @@
+/* GOOD MAPS+PLACES API */
+#map {
+  width: 700px;
+  height: 700px;
+  margin: 0;
+  margin-right: 50px;
+  display: inline-block;
+  position: relative ;
+  float: right;
+}
+
+/* #description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+} */
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+/* END OF TEST MAP */
+
+
+
+
+
+
 html {
   margin: 0px;
   background-color: white;
@@ -18,13 +77,24 @@ body {
 }
 #map1 {
   width: 600px;
-  height: 450px;
+  height: 500px;
   margin: 0;
+  margin-right: 50px;
   display: inline-block;
-  position: relative;
+  position: relative ;
   float: right;
 }
-#map2 {
+
+.hoverImage {
+  width: 600px;
+  height: 450px;
+  margin: 0;
+  margin-right: 50px;
+  display: inline-block;
+  position: relative ;
+  float: right;
+}
+/* #map2 {
   width: 400px;
   height: 400px;
   display: inline;
@@ -35,38 +105,44 @@ body {
   height: 400px;
   display: inline;
   position: relative;
-}
+} */
 
 .neighborhoods {
   width: 25%;
-  color: back;
+  color: black;
   display: inline-block;
   text-align: left;
   position: relative;
 }
 .neighborhoodLink {
   text-decoration: none;
-  color: blue;
+  color: black;
   position: relative;
 }
 
 
 
-/* HOVER OVER */
+/* HOVER OVER NEIGHBORHOODS*/
 *{margin:0px; padding:0px}
 
-.container{
+.container {
   padding:10px;
   width:200px;
 }
 
-.dropMenu{display: none;
+.dropMenu {
+  display: none;
   height: 75px;
   overflow: auto;
   width: 200px;}
 
 .container:hover .dropMenu {
   display:block;
+}
+
+.hoverImage  {
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -117,7 +193,7 @@ body {
 
 
 /* BACKGROUND IMAGES */
-img#page1 {
+/* img#page1 {
   top: 30%;
   left: 30%;
   width: 100%;
@@ -130,7 +206,6 @@ img#page1 {
   background: url(./images/brooklynBridge.jpg) no-repeat;
   background-size: cover;
   position: relative;
-
-}
+} */
 
 

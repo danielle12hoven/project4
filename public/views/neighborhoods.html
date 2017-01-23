@@ -10,7 +10,7 @@
 
   <div id="outerNeighborhood">
     <div class="neighborhoods">
-      <img id="page1" src="./images/brooklynBridge.jpg" alt="">
+    <!-- <img id="page1" src="./images/brooklynBridge.jpg" alt=""> -->
       <h1>Neighborhoods</h1>
       <p>(Based off studio apartment, non-doorman)</p>
       <br />
@@ -23,7 +23,6 @@
             <p>Nightlife:</p>
             <p>Subway:</p>
             <p>Crime:</p>
-            <div id="map"></div>
           </div>
       </div>
       <div class="container">
@@ -192,17 +191,89 @@
           </div>
       </div>
     </div>
-    <iframe id="map1" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d48367.21975234898!2d-73.98886824999998!3d40.74109854999999!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1484839009657" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
 
 
 
-<!-- <br /> <br />
-  <img class="map" id="map3" src="./images/popular.jpg" alt="no image">
-    <br /> <br />
-  <img class="map" id="map2" src="./images/studioRent.png" alt="no image">
-    <br /> <br />
- -->
+
+<!-- TEST MAP API -->
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map">
+    <script>
+
+      function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.783435, lng: -73.96625},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+    </script>
+    </div>
+    </div>
+    <script id="map1" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClWpNXSglrQyN5VeimDg2Eh60D-6CipEQ&libraries=places&callback=initAutocomplete"
+         async defer frameborder="0" style="border:0" allowfullscreen></script>
+<!-- END OF MAP TEST -->
+
 
 
     <div id="container3">

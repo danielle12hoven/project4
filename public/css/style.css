@@ -19,34 +19,33 @@ body {
 #container2 {
   border: solid white;
   width: 100%;
-  height: 800px;
+  height: 780px;
   margin-bottom: 100px;
-/*
     top: 30%;
     left: 30%;
     width: 100%;
-    height: 100%;
+    height: 120%;
     z-index: -150;
     -ms-transform: translateX(-30%) translateY(-30%);
     -moz-transform: translateX(-30%) translateY(-30%);
     -webkit-transform: translateX(-30%) translateY(-30%);
     transform: translateX(-30%) translateY(-30%);
-    background: url(./images/visa.jpeg) no-repeat;
     background-size: cover;
-    position: relative; */
+    position: relative;
 }
 
 
-#subway {
-  height: 1000px;
-}
+/* #subway {
+  height: 2000px;
+} */
 #subwayMap img {
   position: relative;
   display: inline-block;
-  height: 750px;
-  padding-top: 20px;
+  height: 650px;
+  width: 530px;
+  padding-top: 30px;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 50px;
   float: left;
 }
 
@@ -55,7 +54,8 @@ body {
   display: inline-block;
   color: white;
   text-align: right;
-  padding-right: 20px;
+  padding-top: 10px;
+  padding-right: 50px;
   padding-left: 20px;
   float: right;
 /*       -ms-transform: translateX(-30%) translateY(-30%);
@@ -170,7 +170,7 @@ video#page1 {
     position: relative;
 }
 
-img#page3 {
+img#page2 {
     top: 30%;
     left: 30%;
     width: 100%;
@@ -182,6 +182,7 @@ img#page3 {
     transform: translateX(-30%) translateY(-30%);
     background: url(./images/visa.jpeg) no-repeat;
     background-size: cover;
-    position: relative;
+    position: fixed;
+    opacity: .25;
 }
 
