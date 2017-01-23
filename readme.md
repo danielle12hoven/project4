@@ -18,3 +18,9 @@ https://github.com/aamaliaa/mta-gtfs
 
 http://www.mns.com/manhattan_rental_market_report
 - NYC rental stats
+
+http://cdn.abclocal.go.com/content/wabc/images/cms/010416-murderratesper100k.jpg
+- image on murder rates NYC
+
+https://www.bls.gov/regions/new-york-new-jersey/images/28686.gif
+- image on injuries
