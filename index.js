@@ -45,13 +45,6 @@ var mta = new Mta({
   // key: 'c1e7da8de8a1fda8490eb53eeadaa06e', // only needed for mta.schedule() method
 });
 
-// mta.stop().then(function (result) {
-//   console.log(result);
-//   console.log('.stop worked')
-// }).catch(function (err) {
-//   console.log(err);
-// });
-
 
 app.get('/index', function(req, res){
     mta.status('subway').then(function (result) {

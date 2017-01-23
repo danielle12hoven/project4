@@ -1,35 +1,44 @@
 $(document).ready(function() {
 console.log("script loaded")
 
-//API//
-// var MY_KEY = config.MY_KEY;
-// var MY_KEY = process.env.MY_KEY;
 
 
-// MTA API//
-// var getMTA = function (MTA) {
-//   $.ajax({
-//     type:"GET",
-//     url: '/api/v1/trains/L',
-//     dataType: "JSON",
-//     success: function(data) {
-//       console.log(data.train);
-//       parseMTA(data);
-//     },
-//     error: function(data){
-//       console.log(data)
-//     }
-//   })
-// }
+// TESTING EVENTS APi//
+var getEvents = function(events) {
+$.ajax({
+  type: 'GET',
+  url: "https://api.cityofnewyork.us/calendar/v1/categories.htm?app_id=58a91670&app_key=7ecfe29e6005ba314b6488f35cc3550b",
+  dataType: 'JSON',
+  success: function(categories) {
+    console.log("hello")
+    postEvents()
+  },
 
-// var parseMTA = function(data) {
-//   var $MTAUl = $("ul");
-//   var $MTALi = $("li");
-//   var $MTAMap = data.train
+  error: function(categories) {
+    console.log(categories)
+  }
+});
+}
 
-//   $MTAUl.append($MTALi);
-//   $("postMTAData").append($MTAUl)
-// }
+var postEvents = function(categories) {
+  var $eventsUl = $("<ul>");
+
+  for(var j=0; j < categories.length; j++){
+    var $eventsLi = $("<li>");
+    $eventsLi = $eventsLi.addClass("appendEvents")
+
+  var eventsName = categories[j].athletic;
+
+  $eventsLi.append($eventsName)
+  $eventsUl.append($eventsLi)
+  $(".postEvents").append($eventsUl)
+    console.log("working")
+}
+  console.log("working")
+}
+  console.log("working")
+// END OF TESTING EVENTS API//
+
 
 
 

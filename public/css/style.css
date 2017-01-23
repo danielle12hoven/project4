@@ -16,9 +16,10 @@ body {
   padding-top: 40px;
   width: 100%;
   height: 150%;
+  border-radius: 10px;
 }
 #container2 {
-  /* border-radius: 10px; */
+  border-radius: 10px;
   border: solid white;
   width: 100%;
   height: 780px;
@@ -49,6 +50,7 @@ body {
   padding-right: 20px;
   padding-left: 50px;
   float: left;
+  border-radius: 10px;
 }
 
 #subwayLive {
@@ -152,6 +154,7 @@ body {
     text-align:center;
     line-height:100%;
     color: white;
+    border-radius: 10px;
 }
 
 
@@ -169,6 +172,7 @@ video#page1 {
     background: url(./media/NYC-Traffic.jpg) no-repeat;
     background-size: cover;
     position: relative;
+    border-radius: 10px;
 }
 
 img#page2 {
