@@ -5,9 +5,10 @@ html {
 
 html,
 body {
-   margin:20px;
-   padding:0;
-   height:100%;
+  margin:20px;
+  padding:0;
+  height:100%;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
 
