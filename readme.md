@@ -8,8 +8,10 @@ https://www.youtube.com/embed/N1vu1_B4i54
 - nyc image
 
 https://developers.google.com/maps/documentation/embed/start
-- googlemaps api
+- google maps api
 
+https://developers.google.com/places/
+- google places api
 
 https://github.com/aamaliaa/mta-gtfs
 - MTA train API
