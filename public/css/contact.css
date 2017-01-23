@@ -1,6 +1,8 @@
 html {
   margin: 0px;
   background-color: white;
+  background:#676470;
+  transition:all 0.3s ease;
 }
 
 html,
@@ -19,15 +21,22 @@ form {
   border: solid black;
   position: relative;
   border-radius: 10px;
+  background-color: #d3d3d3;
 }
+
+.textName {
+  margin-left: 40px;
+}
+
 
 .messageBox {
   margin-left: 40px;
+  border-radius: 10px;
 }
 
 #textName {
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
-
+  border-radius: 10px;
 }
 #textBox {
   width: 96%;
@@ -52,7 +61,8 @@ form {
    width:100%;
    height:60px;   /* Height of the footer */
    background-color: white;
-   margin-left: -30px;
+   margin-left: -40px;
+   margin-right: 40px;
 }
 
 #footer ul {

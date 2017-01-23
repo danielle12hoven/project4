@@ -39,7 +39,9 @@
 
 html {
   margin: 0px;
-  background-color: white;
+  /* background-color: white; */
+  background:#676470;
+  transition:all 0.3s ease;
   background-image: url('./images/amsterdam.jpg');
 }
 
@@ -175,8 +177,9 @@ body {
    width:100%;
    height:60px;   /* Height of the footer */
    background-color: white;
-   margin-left: -30px;
-}
+   margin-left: -40px;
+   margin-right: 40px;
+ }
 
 #footer ul {
   margin-top: 15px;
