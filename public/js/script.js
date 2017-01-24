@@ -48,7 +48,7 @@ $('[data-popup="popup-1"]').fadeIn(5000)
   console.log($('[data-popup-close]'));
     $('[data-popup-close]').on('click', function(e)  {
         var targetedPopup = $(this).attr('data-popup-close');
-        $('[data-popup="' + targetedPopup + '"]').fadeOut(1000);
+        $('[data-popup="' + targetedPopup + '"]').fadeOut(500);
     });
 //end of dialog box//
 
