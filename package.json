@@ -1,22 +1,26 @@
 {
   "name": "project4",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.8.1"
+  },
   "description": "project4",
   "main": "index.js",
   "dependencies": {
-    "xxx": "0.0.1",
-    "mustache-express": "1.2.4",
-    "express": "4.14.1",
-    "mustache": "2.3.0",
     "body-parser": "1.16.0",
+    "express": "4.14.1",
     "method-override": "2.3.7",
     "mta-gtfs": "1.0.2",
+    "mustache": "2.3.0",
+    "mustache-express": "1.2.4",
     "nodemon": "1.11.0",
-    "pg-promise": "5.5.6"
+    "pg-promise": "^5.5.6",
+    "xxx": "0.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
