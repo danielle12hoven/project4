@@ -7,7 +7,7 @@ const mustacheExpress = require('mustache-express');
 const methodOverride = require('method-override');
 const bodyParser = require("body-parser");
 const session = require ("express-session");
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 
 
 var fetch = require('node-fetch');
@@ -21,12 +21,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
-app.use(session({
-  secret: 'theTruthIsOutThere51',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false }
-}))
+// app.use(session({
+//   secret: 'theTruthIsOutThere51',
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { secure: false }
+// }))
 
 
 var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000/project4');
