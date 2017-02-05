@@ -2,7 +2,7 @@ const PORT = process.env.PORT || 3000;
 
 const express = require('express');
 const app = express();
-const pgp = require('pg-promise')();
+// const pgp = require('pg-promise')();
 const mustacheExpress = require('mustache-express');
 const methodOverride = require('method-override');
 const bodyParser = require("body-parser");
@@ -29,7 +29,7 @@ app.use(methodOverride('_method'));
 // }))
 
 
-var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000/project4');
+// var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000/project4');
 
 app.listen(PORT, function() {
   console.log('Node app is running on', PORT);
