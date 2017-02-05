@@ -1,29 +1,21 @@
 {
   "name": "project4",
   "version": "1.0.0",
+  "description": "project4",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/danielle12hoven/project4.git"
+    "url": "git+https://github.com/danielle12hoven/project4.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/danielle12hoven/project4/issues"
   },
-  "homepage": "https://github.com/danielle12hoven/project4#readme",
-  "dependencies": {
-    "body-parser": "^1.13.3",
-    "express": "^4.14.0",
-    "mta-gtfs": "^1.0.2",
-    "mustache-express": "^1.2.4",
-    "node-fetch": "^1.6.3",
-    "nodemon": "^1.11.0"
-  },
-  "devDependencies": {},
-  "description": ""
+  "homepage": "https://github.com/danielle12hoven/project4#readme"
 }
