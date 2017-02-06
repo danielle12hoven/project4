@@ -3,7 +3,7 @@ console.log("script loaded")
 
 
 
-// TESTING EVENTS APi//
+// // TESTING EVENTS APi//
 // var getEvents = function(events) {
 // $.ajax({
 //   type: 'GET',
@@ -20,24 +20,24 @@ console.log("script loaded")
 // });
 // }
 
-var postEvents = function(categories) {
-  var $eventsUl = $("<ul>");
+// var postEvents = function(categories) {
+//   var $eventsUl = $("<ul>");
 
-  for(var j=0; j < categories.length; j++){
-    var $eventsLi = $("<li>");
-    $eventsLi = $eventsLi.addClass("appendEvents")
+//   for(var j=0; j < categories.length; j++){
+//     var $eventsLi = $("<li>");
+//     $eventsLi = $eventsLi.addClass("appendEvents")
 
-  var eventsName = categories[j].athletic;
+//   var eventsName = categories[j].athletic;
 
-  $eventsLi.append($eventsName)
-  $eventsUl.append($eventsLi)
-  $(".postEvents").append($eventsUl)
-    console.log("working")
-}
-  console.log("working")
-}
-  console.log("working")
-// END OF TESTING EVENTS API//
+//   $eventsLi.append($eventsName)
+//   $eventsUl.append($eventsLi)
+//   $(".postEvents").append($eventsUl)
+//     console.log("working")
+// }
+//   console.log("working")
+// }
+//   console.log("working")
+// // END OF TESTING EVENTS API//
 
 
 

@@ -2,12 +2,13 @@ const PORT = process.env.PORT || 3000;
 
 const express = require('express');
 const app = express();
-const pgp = require('pg-promise')();
+// const pgp = require('pg-promise')();
 const mustacheExpress = require('mustache-express');
 const methodOverride = require('method-override');
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 // const session = require ("express-session");
 // const bcrypt = require('bcrypt');
+
 
 var fetch = require('node-fetch');
 
@@ -16,8 +17,8 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/public/views');
 app.use("/", express.static(__dirname + '/public'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
 // app.use(session({
@@ -28,7 +29,7 @@ app.use(methodOverride('_method'));
 // }))
 
 
-var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000/project4');
+// var db = pgp(process.env.DATABASE_URL || 'postgres://danielletwaalfhoven@localhost:3000/project4');
 
 app.listen(PORT, function() {
   console.log('Node app is running on', PORT);
@@ -68,8 +69,17 @@ app.get('/index2', function(req, res){
 
 
 
+app.get('/', function(req, res){
+    mta.status('subway').then(function (result) {
+      console.log(result);
+      console.log('status worked')
+      console.log('/index post working')
+      var stuff = {data:result}
+      res.render('index', stuff)
+    });
+  });
 
-//WORKS!
+// //WORKS!
 // app.get("/", function(req, res){
 //   var logged_in;
 //   var email;
@@ -87,8 +97,8 @@ app.get('/index2', function(req, res){
 //     "id": id
 //   }
 
-//   res.render('index');
-//   // res.render('sign-up/signin');
+//   // res.render('index');
+//   res.render('sign-up/signin');
 // });
 
 
@@ -108,7 +118,7 @@ app.get('/index2', function(req, res){
 //   });
 // })
 
-// //SIGN IN - WORKS!
+//SIGN IN - WORKS!
 // app.post('/signin', function(req, res){
 //   var data = req.body;
 
@@ -128,27 +138,27 @@ app.get('/index2', function(req, res){
 // });
 
 //EMAIL DATA - WORKS!
-app.post('/contact', function(req, res){
-  console.log(req.body.name);
-    db.one("INSERT INTO emails(name, email, message) values($1, $2, $3) returning message", [req.body.name, req.body.email, req.body.message])
-   .then(function(data){
-     console.log(data.id);
-     res.render("contactSent",{message: data.message});
-   })
-   .catch(function(error){
-     console.log("Error, User could not be made", error.message || error);
-   });
-});
+// app.post('/contact', function(req, res){
+//   console.log(req.body.name);
+//     db.one("INSERT INTO emails(name, email, message) values($1, $2, $3) returning message", [req.body.name, req.body.email, req.body.message])
+//    .then(function(data){
+//      console.log(data.id);
+//      res.render("contactSent",{message: data.message});
+//    })
+//    .catch(function(error){
+//      console.log("Error, User could not be made", error.message || error);
+//    });
+// });
 
 
 
 // ENGLISH RENDERING//
-app.get('/sign-up/signin', function(req, res){
-  res.render('sign-up/signin')
-})
-app.get('/sign-up/signup', function(req, res){
-  res.render('sign-up/signup')
-})
+// app.get('/sign-up/signin', function(req, res){
+//   res.render('sign-up/signin')
+// })
+// app.get('/sign-up/signup', function(req, res){
+//   res.render('sign-up/signup')
+// })
 app.get('/apartments', function(req, res){
   res.render('apartments')
 })
@@ -176,12 +186,12 @@ app.get('/subway', function(req, res){
 
 
 // DUTCH RENDERING//
-app.get('/sign-up/aanmelden', function(req, res){
-  res.render('sign-up/aanmelden')
-})
-app.get('/sign-up/inschrijven', function(req, res){
-  res.render('sign-up/inschrijven')
-})
+// app.get('/sign-up/aanmelden', function(req, res){
+//   res.render('sign-up/aanmelden')
+// })
+// app.get('/sign-up/inschrijven', function(req, res){
+//   res.render('sign-up/inschrijven')
+// })
 app.get('/appartementen', function(req, res){
   res.render('appartementen')
 })
