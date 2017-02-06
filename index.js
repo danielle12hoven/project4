@@ -75,7 +75,7 @@ app.get('/', function(req, res){
       console.log('status worked')
       console.log('/index post working')
       var stuff = {data:result}
-      res.render('/', stuff)
+      res.render('index', stuff)
     });
   });
 
@@ -159,8 +159,8 @@ app.get('/', function(req, res){
 // app.get('/sign-up/signup', function(req, res){
 //   res.render('sign-up/signup')
 // })
-app.get('/apartments', function(req, res){
-  res.render('apartments')
+app.get('/', function(req, res){
+  res.render('index')
 })
 app.get('/contact', function(req, res){
   res.render('contact')
@@ -192,8 +192,8 @@ app.get('/subway', function(req, res){
 // app.get('/sign-up/inschrijven', function(req, res){
 //   res.render('sign-up/inschrijven')
 // })
-app.get('/appartementen', function(req, res){
-  res.render('appartementen')
+app.get('/', function(req, res){
+  res.render('index2')
 })
 app.get('/contact2', function(req, res){
   res.render('contact2')
