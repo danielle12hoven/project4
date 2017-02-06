@@ -4,21 +4,21 @@ console.log("script loaded")
 
 
 // TESTING EVENTS APi//
-var getEvents = function(events) {
-$.ajax({
-  type: 'GET',
-  url: "https://api.cityofnewyork.us/calendar/v1/categories.htm?app_id=58a91670&app_key=7ecfe29e6005ba314b6488f35cc3550b",
-  dataType: 'JSON',
-  success: function(categories) {
-    console.log("hello")
-    postEvents()
-  },
+// var getEvents = function(events) {
+// $.ajax({
+//   type: 'GET',
+//   url: "https://api.cityofnewyork.us/calendar/v1/categories.htm?app_id=58a91670&app_key=7ecfe29e6005ba314b6488f35cc3550b",
+//   dataType: 'JSON',
+//   success: function(categories) {
+//     console.log("hello")
+//     postEvents()
+//   },
 
-  error: function(categories) {
-    console.log(categories)
-  }
-});
-}
+//   error: function(categories) {
+//     console.log(categories)
+//   }
+// });
+// }
 
 var postEvents = function(categories) {
   var $eventsUl = $("<ul>");
