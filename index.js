@@ -75,7 +75,7 @@ app.get('/', function(req, res){
       console.log('status worked')
       console.log('/index post working')
       var stuff = {data:result}
-      res.render('index', stuff)
+      res.render('/', stuff)
     });
   });
 
